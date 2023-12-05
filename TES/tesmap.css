@@ -1,0 +1,12 @@
+.map-sekolah {
+    margin-left: 1100px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    transform: translateY(450px);
+    resize: none;
+    max-width: 100%;
+    width: 200px;
+    height: 200px;
+    
+}

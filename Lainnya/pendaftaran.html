@@ -1,0 +1,272 @@
+<html lang="en">
+ 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Pendaftaran Avalon Global</title>
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/TES/pen.css">
+
+  </head>
+  <body>
+  <nav class="navbar navbar-default">
+    <h1 class="nav-pen">Form Pendaftaran</h1>
+  
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <!--     <a class="navbar-brand" href="index.php">STT MALANG</a>-->
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+            </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+</div>
+   <div class="jumbotron daftar luhur">
+        <h2 class="text-judul-1">Pendaftaran Siswa Smk Avalon Global</h2>
+        <h2 class="text-judul-2">SEKOLAH MENENGAH KEJURUAN TINGKAT INTERNATIONAL</h2>
+    
+          <!-- <img class="fotopack-pendaftaran" src="#" alt="">
+        <h2 class="text-pendaftaran-1" style="color:rgb(252, 252, 252)"><center>Pendaftaran Siswa Smk Avalon Global</center></h2>
+        <h2 class="text-pendaftaran-2" style="color:rgb(252, 252, 252)"><center>SEKOLAH MENENGAH KEJURUAN TINGKAT INTERNATIONAL</center></h2> -->
+       
+    </div>
+<style>
+
+  .navbar-default {
+    background-color: #337ab7;
+    border-color: #337ab7;
+    color: white;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+
+.luhur {
+  background-image:url(/IMAGES2/pendaftaransekolah.jpg);
+}
+
+
+.jumbotron{
+  background-color: gray;
+}
+.navbar-default{
+  margin-bottom: 0;
+}
+</style>
+
+<style>
+    .block-web.primary-box {
+        background: #4eb2d8;
+        padding: 5px;
+        color: white;
+    }
+    
+    .jumbotron{
+  background-color: gray;
+}
+
+.navbar-default{
+  margin-bottom: 0;
+}
+    .navbar {
+        margin-bottom: 0;
+    }
+	
+  .login{
+    background: #2e6da4;
+  }
+
+  .daftar{
+        background-color: #e4e4e4;
+  }
+
+  .petunjuk{
+    border-radius: 0px;
+  }
+</style>
+
+
+
+
+<div class="container-fluid">
+
+
+    <div class="row" style="margin-left:0;margin-right:0;">
+
+    
+
+        <div class="col-md-8">
+        <div class="jumbotron daftar">
+            <div class="header">
+                <h3><center>Formulir Pendaftaran</center></h3>
+            </div>
+            <hr style="border:1px solid black">
+            <form action="" method="post">
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nama Lengkap:</label>
+                    <input type="text" name="nama" class="form-control" placeholder="Nama" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Tempat Lahir</label>
+                    <input type="text" name="tempat" class="form-control" placeholder="Tempat Lahir" required>
+                </div>
+                    <div class="form-group">
+                    <label for="exampleInputEmail1">Tanggal Lahir</label>
+                    <input type="text" name="tgl_lahir" class="form-control" placeholder="Tanggal Lahir" required>
+                </div>
+                             <div class="form-group">
+                    <label for="exampleInputEmail1">Jenis Kelamin</label> <br>
+                    <label class="radio-inline">
+              <input type="radio" name="jenis_kelamin" value="laki-laki"><span class="custom-radio"></span> Laki-laki
+          </label>
+                    <label class="radio-inline">
+              <input type="radio" name="jenis_kelamin" value="perempuan"><span class="custom-radio"></span> Perempuan
+          </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Agama</label>
+                    <select name="agama" class="form-control" required>
+            <option value="0"> -- Pilih Agama -- </option>
+            <option value="islam">Islam</option>
+            <option value="kristen">Kristen</option>
+            <option value="katholik">Katholik</option>
+            <option value="hindu">Hindu</option>
+            <option value="budha">Budha</option>
+            <option value="konghucu">Konghucu</option>
+          </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nomor Handphone/WA</label>
+                    <input type="number" name="nohp" class="form-control" placeholder="No Handphone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Alamat</label>
+                    <textarea name="alamat" cols="50" rows="3" name="alamat" class="form-control" placeholder="Alamat Lengkap Rumah" required></textarea>
+                </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Tahun Lulus dari SMP/MTs/SLTP</label>
+                    <input type="text" name="provinsi" class="form-control" placeholder="Tahun Lulus" required>
+                   </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Asal Sekolah</label>
+                    <input type="text" name="asal_sekolah" class="form-control" placeholder="Nama Lengkap Sekolah Asal" required>
+                </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Kota Asal Sekolah</label>
+                    <input type="text" name="kota_sklh" class="form-control" placeholder="Kota Asal Sekolah" required>
+                </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Nilai Rata-Rata UN/Setara</label>
+                    <input type="text" name="jur_sklh" class="form-control" placeholder="Nilai Rata-Rata" required>
+                </div>
+
+            <div class="form-group">
+                    <label for="exampleInputEmail1">Jurusan Yang Dipilih</label>
+            <select name="no_jaket" class="form-control" required>
+                  <option value="0"> -- Pilih Jurusan -- </option>
+                  <option value="Multimedia Broadcasting">Rekayasa Perangkat Lunak</option>
+                  <option value="Manajemen Komunikasi">Teknik Komputer Jaringan Dan Server</option>
+                  <option value="Desain Grafis & Animasi">Desain Animasi</option>
+                          
+                     </select>
+            </div>
+            
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nama Sosial Media Calon Siswa</label>
+                    <input type="text" name="fb" class="form-control" placeholder="Facebook/Instagram" required>
+                </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Kelas Yang Di Pilih</label> <br>
+                    <label class="radio-inline">
+              <input type="radio" name="kelas" value="Reguler"><span class="custom-radio"></span> Nasional
+          </label>
+                    <label class="radio-inline">
+              <input type="radio" name="kelas" value="Internasional"><span class="custom-radio"></span> Internasional
+          </label>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email Aktif </label>
+                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email Alternatif</label>
+                    <input type="email" name="konfirmemail" class="form-control" placeholder="Email Alternatif" required>
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <input type="submit" name="submit" href="#" class="btn btn-block btn-primary btn-lg" value="Daftar">
+                </div>
+            </form>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+        <div class="jumbotron login">
+            <div class="header">
+                <h3 style="color:white"><center>Login Calon Siswa</center></h3>
+            </div>
+            <hr style="border:1px solid black">
+            <form action="ceklogin.php" method="post">
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" name="no_hp" class="form-control" placeholder="No Handphone" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" name="masuk" class="btn btn-block btn-success" value="Masuk">
+                </div>
+            </form>
+        </div>
+        </div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+      <div class="container">
+        <center><p style="color:white">© <strong>Copyright</strong> K5 TEAM </p></center>
+      </div>
+    </footer>
+    <style>
+    	footer{
+    		background-color: #337ab7;
+    	}
+    </style>
+
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
