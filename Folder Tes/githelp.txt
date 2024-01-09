@@ -1,4 +1,4 @@
 1.Git init
 2.git add .
-3.git remote add origin https://github.com/NewX-Team/Tugas-PW-PB.git
+3.git remote add origin https://github.com/NewX-Team/PW-PB-XI.git
 4.git push -u origin master
