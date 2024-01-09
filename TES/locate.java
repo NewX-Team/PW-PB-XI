@@ -2,103 +2,63 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.util.ArrayList;
-import java.util.Random;
 
-public class AvoidTheEnemies extends JFrame implements ActionListener, KeyListener {
-    private static final int WIDTH = 800;
-    private static final int HEIGHT = 600;
-    private static final int PLAYER_SIZE = 50;
-    private static final int ENEMY_SIZE = 50;
-    private static final int PLAYER_SPEED = 5;
-    private static final int ENEMY_SPEED = 7;
+public class locate extends JFrame {
+    private int stickmanX = 50;
+    private int stickmanY = 200;
 
-    private Timer timer;
-    private ArrayList<Rectangle> enemies;
-    private Rectangle player;
-
-    public AvoidTheEnemies() {
-        setTitle("Avoid the Enemies");
-        setSize(WIDTH, HEIGHT);
+    public locate() {
+        setTitle("Bird Fly Angry");
+        setSize(400, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setResizable(false);
+        setLocationRelativeTo(null);
 
-        player = new Rectangle(WIDTH / 2 - PLAYER_SIZE / 2, HEIGHT - 2 * PLAYER_SIZE, PLAYER_SIZE, PLAYER_SIZE);
-        enemies = new ArrayList<>();
-
-        timer = new Timer(30, this);
+        Timer timer = new Timer(10, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                update();
+                repaint();
+            }
+        });
         timer.start();
-
-        addKeyListener(this);
-        setFocusable(true);
     }
 
-    public void createEnemy() {
-        int enemySize = new Random().nextInt(ENEMY_SIZE) + ENEMY_SIZE / 2;
-        int enemyX = new Random().nextInt(WIDTH - enemySize);
-        enemies.add(new Rectangle(enemyX, 0, enemySize, enemySize));
+    private void update() {
+        stickmanX += 1; // Perbarui posisi stickman (contoh pergerakan ke kanan)
     }
-
-    public void moveEnemies() {
-        for (Rectangle enemy : new ArrayList<>(enemies)) {
-            enemy.y += ENEMY_SPEED;
-            if (enemy.y > HEIGHT) {
-                enemies.remove(enemy);
-            }
-        }
-    }
-
-    public void checkCollisions() {
-        for (Rectangle enemy : new ArrayList<>(enemies)) {
-            if (player.intersects(enemy)) {
-                System.out.println("Game Over!");
-                System.exit(0);
-            }
-        }
-    }
-
-    public void actionPerformed(ActionEvent e) {
-        moveEnemies();
-        createEnemy();
-        checkCollisions();
-        repaint();
-    }
-
-    public void keyTyped(KeyEvent e) {}
-
-    public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_LEFT && player.x > 0) {
-            player.x -= PLAYER_SPEED;
-        } else if (e.getKeyCode() == KeyEvent.VK_RIGHT && player.x < WIDTH - PLAYER_SIZE) {
-            player.x += PLAYER_SPEED;
-        }
-    }
-
-    public void keyReleased(KeyEvent e) {}
 
     @Override
     public void paint(Graphics g) {
         super.paint(g);
-        g.setColor(Color.WHITE);
-        g.fillRect(0, 0, WIDTH, HEIGHT);
+        drawStickman(g);
+    }
 
-        g.setColor(Color.RED);
-        g.fillRect(player.x, player.y, player.width, player.height);
+    private void drawStickman(Graphics g) {
+        // Gambar kepala
+        g.drawOval(stickmanX, stickmanY, 30, 30);
 
-        g.setColor(Color.RED);
-        for (Rectangle enemy : enemies) {
-            g.fillRect(enemy.x, enemy.y, enemy.width, enemy.height);
-        }
+        // Gambar tubuh
+        g.drawLine(stickmanX + 15, stickmanY + 30, stickmanX + 15, stickmanY + 70);
 
-        Toolkit.getDefaultToolkit().sync();
+        // Gambar tangan kiri
+        g.drawLine(stickmanX + 15, stickmanY + 30, stickmanX, stickmanY + 50);
+
+        // Gambar tangan kanan
+        g.drawLine(stickmanX + 15, stickmanY + 30, stickmanX + 30, stickmanY + 50);
+
+        // Gambar kaki kiri
+        g.drawLine(stickmanX + 15, stickmanY + 70, stickmanX, stickmanY + 100);
+
+        // Gambar kaki kanan
+        g.drawLine(stickmanX + 15, stickmanY + 70, stickmanX + 30, stickmanY + 100);
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            AvoidTheEnemies game = new AvoidTheEnemies();
-            game.setVisible(true);
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new locate().setVisible(true);
+            }
         });
     }
 }
