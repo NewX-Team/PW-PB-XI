@@ -36,6 +36,7 @@ def draw_objects():
     for enemy in enemies:
         pygame.draw.rect(screen, RED, enemy)
 
+
 # Loop permainan
 clock = pygame.time.Clock()
 running = True
